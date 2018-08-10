@@ -22,6 +22,28 @@
             qtdeMovimentos++;
         }
 
+        //Verifica se existe movimentos possíveis nas pecas
+        public bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = movimentosPossiveis();
+            for(int i = 0; i < tab.linhas; i++)
+            {
+                for(int j = 0; j < tab.colunas; j++)
+                {
+                    if (mat[i, j]) return true;
+                }
+            }
+
+            return false;
+        }
+
         public abstract bool[,] movimentosPossiveis();
+
+        //Verifica se a peca pode se mover para uma data posicao
+        public bool podeMoverPara(Posicao pos)
+        {
+            bool[,] mat = movimentosPossiveis();
+            return mat[pos.linha, pos.coluna];
+        }
     }
 }
