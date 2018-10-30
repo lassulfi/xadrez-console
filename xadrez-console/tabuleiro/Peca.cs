@@ -45,5 +45,10 @@
             bool[,] mat = movimentosPossiveis();
             return mat[pos.linha, pos.coluna];
         }
+
+        public void decremetarQtdeMovimentos()
+        {
+            qtdeMovimentos--;
+        }
     }
 }
