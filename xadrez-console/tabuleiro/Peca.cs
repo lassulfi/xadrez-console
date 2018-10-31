@@ -40,7 +40,7 @@
         public abstract bool[,] movimentosPossiveis();
 
         //Verifica se a peca pode se mover para uma data posicao
-        public bool podeMoverPara(Posicao pos)
+        public bool movimentoPossivel(Posicao pos)
         {
             bool[,] mat = movimentosPossiveis();
             return mat[pos.linha, pos.coluna];
