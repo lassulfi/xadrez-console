@@ -18,7 +18,7 @@ namespace xadrez
         {
             Peca p = tab.peca(pos);
 
-            return p != null & p.cor != cor;
+            return p != null && p.cor != cor;
         }
 
         private bool livre(Posicao pos)
