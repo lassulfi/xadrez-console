@@ -96,6 +96,10 @@ namespace xadrez_console
         public static PosicaoXadrez lerPosicaoXadrez()
         {
             string s = Console.ReadLine();
+            if(s.Length < 2)
+            {
+                throw new TabuleiroException("Posição incompleta");
+            }
             char coluna = s[0];
             int linha = int.Parse(s[1] + "");
 
